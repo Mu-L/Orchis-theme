@@ -479,7 +479,9 @@
   }
 
   .nautilus-list-view {
-    #NautilusViewCell {
+
+    #NautilusViewCell,
+    .nautilus-view-cell {
       padding: 0;
     }
   }
@@ -497,13 +499,15 @@
     border-radius: $space-size;
   }
 
-  #NautilusPathBar {
+  #NautilusPathBar,
+  .nautilus-pathbar {
     background-color: $titlebar-fill;
+  }
 
-    #NautilusPathButton {
-      &.current-dir {
-        color: $titlebar-text;
-      }
+  #NautilusPathButton,
+  .nautilus-path-button {
+    &.current-dir {
+      color: $titlebar-text;
     }
   }
 }
@@ -529,7 +533,8 @@
   child.activatable {
     padding: 0;
 
-    #NautilusViewCell {
+    #NautilusViewCell,
+    .nautilus-view-cell {
       padding: $space-size;
 
       clamp box {
@@ -549,7 +554,8 @@
   }
 }
 
-#NautilusQueryEditor {
+#NautilusQueryEditor,
+.nautilus-query-editor {
   // search entry
   border-radius: $circular-radius;
   padding: 0 ($medium-size - $menuitem-size) / 2 0 ($space-size + 2px);
@@ -566,11 +572,13 @@
   }
 }
 
-#NautilusPathBar {
+#NautilusPathBar,
+.nautilus-pathbar {
   background-color: $fill;
   border-radius: $circular-radius;
 
-  #NautilusPathButton {
+  #NautilusPathButton,
+  .nautilus-path-button {
     margin: 0 $space-size / 2;
     border-radius: $circular-radius;
 
@@ -588,12 +596,13 @@
     }
   }
 
-  > menubutton > button {
+  &.linked > menubutton > button.toggle {
     border-radius: $circular-radius;
   }
 }
 
-#NautilusQueryEditorTag {
+#NautilusQueryEditorTag,
+.nautilus-query-editor-tag {
   border-radius: $circular-radius;
 
   > button {
@@ -604,7 +613,8 @@
   }
 }
 
-#NautilusFileChooser {
+#NautilusFileChooser,
+.nautilus-file-chooser {
   .content-pane {
     background-color: $base;
   }
